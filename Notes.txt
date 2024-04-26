@@ -1,0 +1,3 @@
+make PY handling to produce QR Code and check Byte amount of Rust executable
+
+Small Game in rust
