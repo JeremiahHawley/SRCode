@@ -43,4 +43,4 @@ def rgb_gen(bin):
       to_write += (",(0,0,255)")
   to_write = to_write[1:]
   file.write(to_write) 
-  file.close();
+  file.close()
