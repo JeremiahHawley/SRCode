@@ -29,20 +29,18 @@ def two_to_five(num):
 def rgb_gen(bin):
   file = open("rgb.txt","w")
   data = str(two_to_five(bin))
+  to_write = ""
   for i in range(len(data)):
     if data[i] == "0":
-      file.write(",(0,0,0)")
+      to_write += (",(0,0,0)")
     if data[i] == "1":
-      file.write(",(255,255,255)")
+      to_write += (",(255,255,255)")
     if data[i] == "2":
-      file.write(",(255,0,0)")
+      to_write += (",(255,0,0)")
     if data[i] == "3":
-      file.write(",(0,255,0)")
+      to_write += (",(0,255,0)")
     if data[i] == "4":
-      file.write(",(0,0,255)")
-  file_data = file.read()
-  file.close()
-  file = open("rgb.txt","w")
-  file_data.replace(',','',1)
-  file.write(file_data) 
+      to_write += (",(0,0,255)")
+  to_write = to_write[1:]
+  file.write(to_write) 
   file.close();
